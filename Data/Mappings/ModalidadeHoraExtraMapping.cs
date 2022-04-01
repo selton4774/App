@@ -25,7 +25,7 @@ namespace App.Data.Mappings
             builder.Property(x => x.Valor)
                    .IsRequired()
                    .HasColumnName("Valor")
-                   .HasColumnType("DECIMAL");
+                   .HasColumnType("FLOAT");
 
         }
     }

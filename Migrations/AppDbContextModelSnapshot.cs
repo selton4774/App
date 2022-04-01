@@ -44,11 +44,11 @@ namespace App.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<DateTime>("DataFim")
+                    b.Property<DateTime?>("DataFim")
                         .HasColumnType("DATETIME")
                         .HasColumnName("DataFim");
 
-                    b.Property<DateTime>("DataInicio")
+                    b.Property<DateTime?>("DataInicio")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("DATETIME")
                         .HasColumnName("DataInicio")
@@ -132,7 +132,7 @@ namespace App.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<DateTime>("DataUso")
+                    b.Property<DateTime?>("DataUso")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("DATETIME")
                         .HasColumnName("DataUso")
@@ -193,8 +193,8 @@ namespace App.Migrations
                         .HasColumnType("NVARCHAR(120)")
                         .HasColumnName("Descricao");
 
-                    b.Property<decimal>("Valor")
-                        .HasColumnType("DECIMAL(38,17)")
+                    b.Property<double>("Valor")
+                        .HasColumnType("FLOAT")
                         .HasColumnName("Valor");
 
                     b.HasKey("Id");

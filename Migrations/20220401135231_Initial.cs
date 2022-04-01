@@ -68,7 +68,7 @@ namespace App.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Descricao = table.Column<string>(type: "NVARCHAR(120)", maxLength: 120, nullable: false),
-                    Valor = table.Column<decimal>(type: "DECIMAL(38,17)", nullable: false)
+                    Valor = table.Column<double>(type: "FLOAT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -145,8 +145,8 @@ namespace App.Migrations
                     IdFuncionario = table.Column<int>(type: "int", nullable: false),
                     IdExpediente = table.Column<int>(type: "int", nullable: false),
                     IdModalidadeContrato = table.Column<int>(type: "int", nullable: false),
-                    DataInicio = table.Column<DateTime>(type: "DATETIME", nullable: false, defaultValueSql: "GETDATE()"),
-                    DataFim = table.Column<DateTime>(type: "DATETIME", nullable: false)
+                    DataInicio = table.Column<DateTime>(type: "DATETIME", nullable: true, defaultValueSql: "GETDATE()"),
+                    DataFim = table.Column<DateTime>(type: "DATETIME", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -186,7 +186,7 @@ namespace App.Migrations
                     IdFuncionario = table.Column<int>(type: "int", nullable: false),
                     IdModalidadeHoraExtra = table.Column<int>(type: "int", nullable: false),
                     IdTipo = table.Column<int>(type: "int", nullable: false),
-                    DataUso = table.Column<DateTime>(type: "DATETIME", nullable: false, defaultValueSql: "GETDATE()"),
+                    DataUso = table.Column<DateTime>(type: "DATETIME", nullable: true, defaultValueSql: "GETDATE()"),
                     QtdUsada = table.Column<int>(type: "INT", nullable: false)
                 },
                 constraints: table =>

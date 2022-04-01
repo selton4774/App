@@ -24,8 +24,7 @@ namespace App.Data.Mappings
             builder.Property(x => x.DataUso)
                    .HasColumnName("DataUso")
                    .HasColumnType("DATETIME")
-                   .HasDefaultValueSql("GETDATE()")
-                   .IsRequired();
+                   .HasDefaultValueSql("GETDATE()");
 
             builder.HasOne(x => x.Tipo)
                    .WithMany(x => x.HoraExtras)

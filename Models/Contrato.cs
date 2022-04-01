@@ -9,8 +9,8 @@ namespace App.Models
         public int IdFuncionario { get; set; }
         public int IdExpediente { get; set; }
         public int IdModalidadeContrato { get; set; }
-        public DateTime DataInicio { get; set; }
-        public DateTime DataFim { get; set; }
+        public DateTime? DataInicio { get; set; }
+        public DateTime? DataFim { get; set; }
         public Funcionario Funcionario { get; set; }
         public ModalidadeContrato ModalidadeContrato { get; set; }
         public Expediente Expediente { get; set; }

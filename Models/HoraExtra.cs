@@ -12,7 +12,7 @@ namespace App.Models
         public ModalidadeHoraExtra ModalidadeHoraExtra { get; set; }
         public int IdModalidadeHoraExtra { get; set; }
         public int IdTipo { get; set; }
-        public DateTime DataUso { get; set; }
+        public DateTime? DataUso { get; set; }
         public int QtdUsada { get; set; }
     }
 }

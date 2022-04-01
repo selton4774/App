@@ -19,8 +19,7 @@ namespace App.Data.Mappings
             builder.Property(x => x.DataInicio)
                    .HasColumnName("DataInicio")
                    .HasColumnType("DATETIME")
-                   .HasDefaultValueSql("GETDATE()")
-                   .IsRequired();
+                   .HasDefaultValueSql("GETDATE()");
 
             builder.Property(x => x.DataFim)
                    .HasColumnName("DataFim")
