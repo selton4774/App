@@ -1,4 +1,5 @@
 ﻿using System;
+using App.UI;
 
 namespace App
 {
@@ -6,7 +7,7 @@ namespace App
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MenuPrincipal.ExibirMenuPrincipal();
         }
     }
 }

@@ -6,10 +6,16 @@ namespace App.Data
 {
     public class AppDbContext : DbContext
     {
+        // dotnet add package Microsoft.EntityFrameworkCore --version 5.0
+        // dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 5.0
+        // dotnet add package EPPlus --version 5.0
 
         public DbSet<Cargo> cargos { get; set; }
         public DbSet<Expediente> expedientes { get; set; }
         public DbSet<ModalidadeContrato> modalidadeContratos { get; set; }
+        public DbSet<Funcionario> funcionarios { get; set; }
+        public DbSet<RegistroPonto> registroPontos { get; set; }
+        public DbSet<Contrato> contratos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlServer("Server=localhost,1433;Database=App;User ID =sa;Password=Es101010!");

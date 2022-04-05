@@ -11,8 +11,7 @@ namespace App.Migrations
                 name: "Cargo",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(type: "int", nullable: false),
                     NomeCargo = table.Column<string>(type: "NVARCHAR(80)", maxLength: 80, nullable: false)
                 },
                 constraints: table =>
@@ -24,8 +23,7 @@ namespace App.Migrations
                 name: "Expediente",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(type: "int", nullable: false),
                     CargaHoraria = table.Column<int>(type: "INT", nullable: false)
                 },
                 constraints: table =>
@@ -37,8 +35,7 @@ namespace App.Migrations
                 name: "Funcionario",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(type: "int", nullable: false),
                     Nome = table.Column<string>(type: "NVARCHAR(80)", maxLength: 80, nullable: false),
                     Sobrenome = table.Column<string>(type: "NVARCHAR(100)", maxLength: 100, nullable: false),
                     Cpf = table.Column<string>(type: "NVARCHAR(14)", maxLength: 14, nullable: false)
@@ -52,8 +49,7 @@ namespace App.Migrations
                 name: "ModalidadeContrato",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(type: "int", nullable: false),
                     Nome = table.Column<string>(type: "NVARCHAR(80)", maxLength: 80, nullable: false)
                 },
                 constraints: table =>
@@ -119,8 +115,7 @@ namespace App.Migrations
                 name: "RegistroPonto",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(type: "int", nullable: false),
                     IdFuncionario = table.Column<int>(type: "int", nullable: false),
                     Tempo = table.Column<DateTime>(type: "DATETIME", nullable: false, defaultValueSql: "GETDATE()")
                 },
@@ -139,8 +134,7 @@ namespace App.Migrations
                 name: "Contrato",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(type: "int", nullable: false),
                     IdCargo = table.Column<int>(type: "int", nullable: false),
                     IdFuncionario = table.Column<int>(type: "int", nullable: false),
                     IdExpediente = table.Column<int>(type: "int", nullable: false),
@@ -222,7 +216,7 @@ namespace App.Migrations
                     IdTipoOcorrencia = table.Column<int>(type: "int", nullable: false),
                     IdStatusOcorrencia = table.Column<int>(type: "int", nullable: false),
                     Data = table.Column<DateTime>(type: "DATETIME", nullable: false, defaultValueSql: "GETDATE()"),
-                    Descricao = table.Column<string>(type: "NVARCHAR(120)", maxLength: 120, nullable: false)
+                    Descricao = table.Column<string>(type: "NVARCHAR(120)", maxLength: 120, nullable: true)
                 },
                 constraints: table =>
                 {

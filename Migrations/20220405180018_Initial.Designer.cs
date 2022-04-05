@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace App.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220401135231_Initial")]
+    [Migration("20220405180018_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,9 +24,7 @@ namespace App.Migrations
             modelBuilder.Entity("App.Models.Cargo", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<string>("NomeCargo")
                         .IsRequired()
@@ -42,9 +40,7 @@ namespace App.Migrations
             modelBuilder.Entity("App.Models.Contrato", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DataFim")
                         .HasColumnType("DATETIME")
@@ -84,9 +80,7 @@ namespace App.Migrations
             modelBuilder.Entity("App.Models.Expediente", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<int>("CargaHoraria")
                         .HasColumnType("INT")
@@ -100,9 +94,7 @@ namespace App.Migrations
             modelBuilder.Entity("App.Models.Funcionario", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<string>("Cpf")
                         .IsRequired()
@@ -167,9 +159,7 @@ namespace App.Migrations
             modelBuilder.Entity("App.Models.ModalidadeContrato", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<string>("Nome")
                         .IsRequired()
@@ -218,7 +208,6 @@ namespace App.Migrations
                         .HasDefaultValueSql("GETDATE()");
 
                     b.Property<string>("Descricao")
-                        .IsRequired()
                         .HasMaxLength(120)
                         .HasColumnType("NVARCHAR(120)")
                         .HasColumnName("Descricao");
@@ -246,9 +235,7 @@ namespace App.Migrations
             modelBuilder.Entity("App.Models.RegistroPonto", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<int>("IdFuncionario")
                         .HasColumnType("int");

@@ -13,8 +13,7 @@ namespace App.Data.Mappings
             builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Id)
-                   .ValueGeneratedOnAdd()
-                   .UseIdentityColumn();
+                    .ValueGeneratedNever();
 
             builder.Property(x => x.Nome)
                    .HasColumnName("Nome")
