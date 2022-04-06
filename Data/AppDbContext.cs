@@ -16,6 +16,12 @@ namespace App.Data
         public DbSet<Funcionario> funcionarios { get; set; }
         public DbSet<RegistroPonto> registroPontos { get; set; }
         public DbSet<Contrato> contratos { get; set; }
+        public DbSet<Tipo> tipos { get; set; }
+        public DbSet<ModalidadeHoraExtra> modalidadeHoraExtras { get; set; }
+        public DbSet<HoraExtra> horaExtras { get; set; }
+        public DbSet<TipoOcorrencia> tipoOcorrencias { get; set; }
+        public DbSet<StatusOcorrencia> statusOcorrencias { get; set; }
+        public DbSet<Ocorrencia> ocorrencias { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlServer("Server=localhost,1433;Database=App;User ID =sa;Password=Es101010!");

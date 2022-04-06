@@ -120,9 +120,7 @@ namespace App.Migrations
             modelBuilder.Entity("App.Models.HoraExtra", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DataUso")
                         .ValueGeneratedOnAdd()
@@ -173,9 +171,7 @@ namespace App.Migrations
             modelBuilder.Entity("App.Models.ModalidadeHoraExtra", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
@@ -195,9 +191,7 @@ namespace App.Migrations
             modelBuilder.Entity("App.Models.Ocorrencia", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("Data")
                         .ValueGeneratedOnAdd()
@@ -254,9 +248,7 @@ namespace App.Migrations
             modelBuilder.Entity("App.Models.StatusOcorrencia", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
@@ -278,9 +270,7 @@ namespace App.Migrations
             modelBuilder.Entity("App.Models.Tipo", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
@@ -296,9 +286,7 @@ namespace App.Migrations
             modelBuilder.Entity("App.Models.TipoOcorrencia", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<string>("Descricao")
                         .IsRequired()

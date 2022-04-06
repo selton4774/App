@@ -209,12 +209,152 @@ namespace App.UI
                         }
                     }
 
+                    for (int linha = 2; linha <= max; linha++)
+                    {
+                        // faz a leitura da linha e adiciona na listaTipo
+                        if (worksheet.Cells[linha, 21].Text.Length > 0)
+                        {
+                            var tipo = new Tipo
+                            {
+                                Id = int.Parse(worksheet.Cells[linha, 21].Value.ToString()),
+                                Descricao = worksheet.Cells[linha, 22].Value.ToString()
+                            };
+
+                            listaTipo.Add(tipo);
+                        }
+                    }
+
+
+                    for (int linha = 2; linha <= max; linha++)
+                    {
+                        // faz a leitura da linha e adiciona na listaModalidadeHoraExtra
+                        if (worksheet.Cells[linha, 23].Text.Length > 0)
+                        {
+                            var modalidadeHoraExtra = new ModalidadeHoraExtra
+                            {
+                                Id = int.Parse(worksheet.Cells[linha, 23].Value.ToString()),
+                                Descricao = worksheet.Cells[linha, 24].Value.ToString(),
+                                Valor = float.Parse(worksheet.Cells[linha, 25].Value.ToString())
+                            };
+
+                            listaModalidadeHoraExtra.Add(modalidadeHoraExtra);
+                        }
+                    }
+
+                    for (int linha = 2; linha <= max; linha++)
+                    {
+                        // faz a leitura da linha e adiciona na listaHoraExtra
+                        if (worksheet.Cells[linha, 26].Text.Length > 0)
+                        {
+
+                            if (worksheet.Cells[linha, 31].Text.Length > 0)
+                            {
+                                var horaExtra = new HoraExtra
+                                {
+                                    Id = int.Parse(worksheet.Cells[linha, 26].Value.ToString()),
+                                    IdFuncionario = int.Parse(worksheet.Cells[linha, 27].Value.ToString()),
+                                    IdTipo = int.Parse(worksheet.Cells[linha, 28].Value.ToString()),
+                                    IdModalidadeHoraExtra = int.Parse(worksheet.Cells[linha, 29].Value.ToString()),
+                                    QtdUsada = int.Parse(worksheet.Cells[linha, 30].Value.ToString()),
+                                    DataUso = Convert.ToDateTime(worksheet.Cells[linha, 31].Value.ToString())
+                                };
+
+                                listaHoraExtra.Add(horaExtra);
+                            }
+                            else // caso o campo DataUso for nulo sera preenchido com a data e hora atual
+                            {
+                                var horaExtra = new HoraExtra
+                                {
+                                    Id = int.Parse(worksheet.Cells[linha, 26].Value.ToString()),
+                                    IdFuncionario = int.Parse(worksheet.Cells[linha, 27].Value.ToString()),
+                                    IdTipo = int.Parse(worksheet.Cells[linha, 28].Value.ToString()),
+                                    IdModalidadeHoraExtra = int.Parse(worksheet.Cells[linha, 29].Value.ToString()),
+                                    QtdUsada = int.Parse(worksheet.Cells[linha, 30].Value.ToString()),
+                                };
+
+                                listaHoraExtra.Add(horaExtra);
+                            }
+                        }
+                    }
+
+                    for (int linha = 2; linha <= max; linha++)
+                    {
+                        // faz a leitura da linha e adiciona na listaTipoOcorrencia
+                        if (worksheet.Cells[linha, 32].Text.Length > 0)
+                        {
+                            var tipoOcorrencia = new TipoOcorrencia
+                            {
+                                Id = int.Parse(worksheet.Cells[linha, 32].Value.ToString()),
+                                Descricao = worksheet.Cells[linha, 33].Value.ToString(),
+                            };
+
+                            listaTipoOcorrencia.Add(tipoOcorrencia);
+                        }
+                    }
+
+                    for (int linha = 2; linha <= max; linha++)
+                    {
+                        // faz a leitura da linha e adiciona na listaStatusOcorrencia
+                        if (worksheet.Cells[linha, 34].Text.Length > 0)
+                        {
+                            var statusOcorrencia = new StatusOcorrencia
+                            {
+                                Id = int.Parse(worksheet.Cells[linha, 34].Value.ToString()),
+                                Nome = worksheet.Cells[linha, 35].Value.ToString(),
+                                Descricao = worksheet.Cells[linha, 36].Value.ToString(),
+                            };
+
+                            listaStatusOcorrencia.Add(statusOcorrencia);
+                        }
+                    }
+
+                    for (int linha = 2; linha <= max; linha++)
+                    {
+                        // faz a leitura da linha e adiciona na listaOcorrencia
+                        if (worksheet.Cells[linha, 37].Text.Length > 0)
+                        {
+                            if (worksheet.Cells[linha, 42].Text.Length > 0)
+                            {
+                                var ocorrencia = new Ocorrencia
+                                {
+                                    Id = int.Parse(worksheet.Cells[linha, 37].Value.ToString()),
+                                    IdFuncionario = int.Parse(worksheet.Cells[linha, 38].Value.ToString()),
+                                    IdStatusOcorrencia = int.Parse(worksheet.Cells[linha, 39].Value.ToString()),
+                                    IdTipoOcorrencia = int.Parse(worksheet.Cells[linha, 40].Value.ToString()),
+                                    Descricao = worksheet.Cells[linha, 41].Value.ToString(),
+                                    Data = Convert.ToDateTime(worksheet.Cells[linha, 42].Value.ToString())
+                                };
+
+                                listaOcorrencia.Add(ocorrencia);
+                            }
+                            else // caso o campo Data for nulo sera preenchido com a data e hora atual
+                            {
+                                var ocorrencia = new Ocorrencia
+                                {
+                                    Id = int.Parse(worksheet.Cells[linha, 37].Value.ToString()),
+                                    IdFuncionario = int.Parse(worksheet.Cells[linha, 38].Value.ToString()),
+                                    IdStatusOcorrencia = int.Parse(worksheet.Cells[linha, 39].Value.ToString()),
+                                    IdTipoOcorrencia = int.Parse(worksheet.Cells[linha, 40].Value.ToString()),
+                                    Descricao = worksheet.Cells[linha, 41].Value.ToString(),
+                                };
+
+                                listaOcorrencia.Add(ocorrencia);
+                            }
+                        }
+                    }
+
                     context.funcionarios.AddRange(listaFuncionario);
                     context.registroPontos.AddRange(listaRegistroPonto);
                     context.modalidadeContratos.AddRange(listaModalidadeContrato);
                     context.expedientes.AddRange(listaExpediente);
                     context.cargos.AddRange(listaCargo);
                     context.contratos.AddRange(listaContrato);
+                    context.tipos.AddRange(listaTipo);
+                    context.modalidadeHoraExtras.AddRange(listaModalidadeHoraExtra);
+                    context.horaExtras.AddRange(listaHoraExtra);
+                    context.tipoOcorrencias.AddRange(listaTipoOcorrencia);
+                    context.statusOcorrencias.AddRange(listaStatusOcorrencia);
+                    context.ocorrencias.AddRange(listaOcorrencia);
 
                     context.SaveChanges(); // salva as mudanças no banco
                 }

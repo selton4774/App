@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace App.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220405180018_Initial")]
+    [Migration("20220406125319_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -122,9 +122,7 @@ namespace App.Migrations
             modelBuilder.Entity("App.Models.HoraExtra", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DataUso")
                         .ValueGeneratedOnAdd()
@@ -175,9 +173,7 @@ namespace App.Migrations
             modelBuilder.Entity("App.Models.ModalidadeHoraExtra", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
@@ -197,9 +193,7 @@ namespace App.Migrations
             modelBuilder.Entity("App.Models.Ocorrencia", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("Data")
                         .ValueGeneratedOnAdd()
@@ -256,9 +250,7 @@ namespace App.Migrations
             modelBuilder.Entity("App.Models.StatusOcorrencia", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
@@ -280,9 +272,7 @@ namespace App.Migrations
             modelBuilder.Entity("App.Models.Tipo", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
@@ -298,9 +288,7 @@ namespace App.Migrations
             modelBuilder.Entity("App.Models.TipoOcorrencia", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<string>("Descricao")
                         .IsRequired()

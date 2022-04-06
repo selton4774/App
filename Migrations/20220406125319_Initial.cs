@@ -61,8 +61,7 @@ namespace App.Migrations
                 name: "ModalidadeHoraExtra",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(type: "int", nullable: false),
                     Descricao = table.Column<string>(type: "NVARCHAR(120)", maxLength: 120, nullable: false),
                     Valor = table.Column<double>(type: "FLOAT", nullable: false)
                 },
@@ -75,8 +74,7 @@ namespace App.Migrations
                 name: "StatusOcorrencia",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(type: "int", nullable: false),
                     Nome = table.Column<string>(type: "NVARCHAR(80)", maxLength: 80, nullable: false),
                     Descricao = table.Column<string>(type: "NVARCHAR(120)", maxLength: 120, nullable: false)
                 },
@@ -89,8 +87,7 @@ namespace App.Migrations
                 name: "Tipo",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(type: "int", nullable: false),
                     Descricao = table.Column<string>(type: "NVARCHAR(120)", maxLength: 120, nullable: false)
                 },
                 constraints: table =>
@@ -102,8 +99,7 @@ namespace App.Migrations
                 name: "TipoOcorrencia",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(type: "int", nullable: false),
                     Descricao = table.Column<string>(type: "NVARCHAR(80)", maxLength: 80, nullable: false)
                 },
                 constraints: table =>
@@ -175,8 +171,7 @@ namespace App.Migrations
                 name: "HoraExtra",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(type: "int", nullable: false),
                     IdFuncionario = table.Column<int>(type: "int", nullable: false),
                     IdModalidadeHoraExtra = table.Column<int>(type: "int", nullable: false),
                     IdTipo = table.Column<int>(type: "int", nullable: false),
@@ -210,8 +205,7 @@ namespace App.Migrations
                 name: "Ocorrencia",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<int>(type: "int", nullable: false),
                     IdFuncionario = table.Column<int>(type: "int", nullable: false),
                     IdTipoOcorrencia = table.Column<int>(type: "int", nullable: false),
                     IdStatusOcorrencia = table.Column<int>(type: "int", nullable: false),
