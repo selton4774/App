@@ -5,8 +5,8 @@ namespace App.Models
     public class Funcionario
     {
         public int Id { get; set; }
-        public ICollection<RegistroPonto> RegistroPontos { get; set; }
-        public ICollection<HoraExtra> HoraExtras { get; set; }
+        public ICollection<RegistroPonto> RegistroDePontos { get; set; }
+        public ICollection<HoraExtra> HorasExtras { get; set; }
         public ICollection<Ocorrencia> Ocorrencias { get; set; }
         public ICollection<Contrato> Contratos { get; set; }
         public string Nome { get; set; }

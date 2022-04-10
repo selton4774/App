@@ -12,15 +12,15 @@ namespace App.Data
 
         public DbSet<Cargo> cargos { get; set; }
         public DbSet<Expediente> expedientes { get; set; }
-        public DbSet<ModalidadeContrato> modalidadeContratos { get; set; }
+        public DbSet<ModalidadeContrato> modalidadesDeContrato { get; set; }
         public DbSet<Funcionario> funcionarios { get; set; }
-        public DbSet<RegistroPonto> registroPontos { get; set; }
+        public DbSet<RegistroPonto> registrosDePonto { get; set; }
         public DbSet<Contrato> contratos { get; set; }
         public DbSet<Tipo> tipos { get; set; }
-        public DbSet<ModalidadeHoraExtra> modalidadeHoraExtras { get; set; }
-        public DbSet<HoraExtra> horaExtras { get; set; }
-        public DbSet<TipoOcorrencia> tipoOcorrencias { get; set; }
-        public DbSet<StatusOcorrencia> statusOcorrencias { get; set; }
+        public DbSet<ModalidadeHoraExtra> modalidadesDeHoraExtra { get; set; }
+        public DbSet<HoraExtra> horasExtras { get; set; }
+        public DbSet<TipoOcorrencia> tiposDeOcorrencia { get; set; }
+        public DbSet<StatusOcorrencia> statusDasOcorrencias { get; set; }
         public DbSet<Ocorrencia> ocorrencias { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)

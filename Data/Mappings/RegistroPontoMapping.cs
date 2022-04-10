@@ -13,7 +13,8 @@ namespace App.Data.Mappings
             builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Id)
-                   .ValueGeneratedNever();
+                   .ValueGeneratedOnAdd()
+                   .UseIdentityColumn();
 
             builder.Property(x => x.Tempo)
                    .HasColumnName("Tempo")
@@ -22,7 +23,7 @@ namespace App.Data.Mappings
                    .IsRequired();
 
             builder.HasOne(x => x.Funcionario)
-                   .WithMany(x => x.RegistroPontos)
+                   .WithMany(x => x.RegistroDePontos)
                    .HasForeignKey(x => x.IdFuncionario);
         }
     }

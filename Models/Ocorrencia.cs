@@ -11,7 +11,7 @@ namespace App.Models
         public Funcionario Funcionario { get; set; }
         public int IdTipoOcorrencia { get; set; }
         public int IdStatusOcorrencia { get; set; }
-        public DateTime Data { get; set; }
+        public DateTime? Data { get; set; }
         public string Descricao { get; set; }
     }
 }

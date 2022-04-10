@@ -13,7 +13,8 @@ namespace App.Data.Mappings
             builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Id)
-                   .ValueGeneratedNever();
+                   .ValueGeneratedOnAdd()
+                   .UseIdentityColumn();
 
             builder.Property(x => x.QtdUsada)
                    .HasColumnName("QtdUsada")
@@ -26,15 +27,15 @@ namespace App.Data.Mappings
                    .HasDefaultValueSql("GETDATE()");
 
             builder.HasOne(x => x.Tipo)
-                   .WithMany(x => x.HoraExtras)
+                   .WithMany(x => x.HorasExtras)
                    .HasForeignKey(x => x.IdTipo);
 
             builder.HasOne(x => x.ModalidadeHoraExtra)
-                   .WithMany(x => x.HoraExtras)
+                   .WithMany(x => x.HorasExtras)
                    .HasForeignKey(x => x.IdModalidadeHoraExtra);
 
             builder.HasOne(x => x.Funcionario)
-                   .WithMany(x => x.HoraExtras)
+                   .WithMany(x => x.HorasExtras)
                    .HasForeignKey(x => x.IdFuncionario);
 
         }

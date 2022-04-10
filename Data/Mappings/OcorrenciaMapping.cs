@@ -13,12 +13,14 @@ namespace App.Data.Mappings
             builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Id)
-                   .ValueGeneratedNever();
+                   .ValueGeneratedOnAdd()
+                   .UseIdentityColumn();
 
             builder.Property(x => x.Descricao)
                    .HasColumnName("Descricao")
                    .HasColumnType("NVARCHAR")
-                   .HasMaxLength(120);
+                   .HasMaxLength(120)
+                   .IsRequired();
 
             builder.Property(x => x.Data)
                    .HasColumnName("Data")
