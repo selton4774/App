@@ -185,7 +185,7 @@ namespace App.UI
                             }
                         }
 
-                        // faz a inserção do registro de pontos no banco
+                        // faz a inserção do registro de ponto no banco
                         var IdFuncionario = context.funcionarios.FirstOrDefault(x => x.Cpf == worksheet.Cells[linha, 3].Value.ToString()).Id;
 
 
