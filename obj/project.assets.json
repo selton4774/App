@@ -7094,7 +7094,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "EPPlus >= 5.0.0",
+      "EPPlus >= 5.0.3",
       "Microsoft.EntityFrameworkCore >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.0"
@@ -7139,7 +7139,7 @@
         "dependencies": {
           "EPPlus": {
             "target": "Package",
-            "version": "[5.0.0, )"
+            "version": "[5.0.3, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -7174,17 +7174,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "App depende de EPPlus (>= 5.0.0), mas EPPlus 5.0.0 não foi encontrado. A melhor correspondência aproximada de EPPlus 5.0.3 foi resolvida.",
-      "libraryId": "EPPlus",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    }
-  ]
+  }
 }

@@ -8,7 +8,7 @@ namespace App.Data
     {
         // dotnet add package Microsoft.EntityFrameworkCore --version 5.0
         // dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 5.0
-        // dotnet add package EPPlus --version 5.0
+        // dotnet add package EPPlus --version 5.0.3
 
         public DbSet<Cargo> cargos { get; set; }
         public DbSet<Expediente> expedientes { get; set; }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "svKTgolA52Fl7AVi4/pqONpwgBLWsZVWN7+gR/YLYbNPDzra2D4ELHIrigSw3r/IVRO4Bcjz7IUqBccFFQdmWQ==",
+  "dgSpecHash": "yfqHKf2mp43R2DYRMFNgxoNhymKHbZEftZJJ77GNGTHqibNGsJvvVrotFLdK8cD8j8zAJjbpJC5lV+bzt4ittw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Selton\\Documents\\C#\\Projetos\\App\\App.csproj",
   "expectedPackageFiles": [
@@ -134,16 +134,5 @@
     "C:\\Users\\Selton\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
     "C:\\Users\\Selton\\.nuget\\packages\\system.xml.xpath.xmldocument\\4.3.0\\system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "App depende de EPPlus (>= 5.0.0), mas EPPlus 5.0.0 não foi encontrado. A melhor correspondência aproximada de EPPlus 5.0.3 foi resolvida.",
-      "libraryId": "EPPlus",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    }
-  ]
+  "logs": []
 }
