@@ -6,6 +6,6 @@ namespace App.Models
     {
         public int Id { get; set; }
         public int CargaHoraria { get; set; }
-        public ICollection<Contrato> Contratos { get; set; }
+        public virtual ICollection<Contrato> Contratos { get; set; }
     }
 }

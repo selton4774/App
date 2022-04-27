@@ -28,15 +28,18 @@ namespace App.Data.Mappings
 
             builder.HasOne(x => x.Tipo)
                    .WithMany(x => x.HorasExtras)
-                   .HasForeignKey(x => x.IdTipo);
+                   .HasForeignKey(x => x.IdTipo)
+                   .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(x => x.ModalidadeHoraExtra)
                    .WithMany(x => x.HorasExtras)
-                   .HasForeignKey(x => x.IdModalidadeHoraExtra);
+                   .HasForeignKey(x => x.IdModalidadeHoraExtra)
+                   .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(x => x.Funcionario)
                    .WithMany(x => x.HorasExtras)
-                   .HasForeignKey(x => x.IdFuncionario);
+                   .HasForeignKey(x => x.IdFuncionario)
+                   .OnDelete(DeleteBehavior.Restrict);
 
         }
     }

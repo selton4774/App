@@ -11,10 +11,10 @@ namespace App.Models
         public int IdModalidadeContrato { get; set; }
         public DateTime? DataInicio { get; set; }
         public DateTime? DataFim { get; set; }
-        public Funcionario Funcionario { get; set; }
-        public ModalidadeContrato ModalidadeContrato { get; set; }
-        public Expediente Expediente { get; set; }
-        public Cargo Cargo { get; set; }
+        public virtual Funcionario Funcionario { get; set; }
+        public virtual ModalidadeContrato ModalidadeContrato { get; set; }
+        public virtual Expediente Expediente { get; set; }
+        public virtual Cargo Cargo { get; set; }
 
     }
 }

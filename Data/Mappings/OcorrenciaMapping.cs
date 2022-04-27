@@ -30,15 +30,18 @@ namespace App.Data.Mappings
 
             builder.HasOne(x => x.TipoOcorrencia)
                    .WithMany(x => x.Ocorrencias)
-                   .HasForeignKey(x => x.IdTipoOcorrencia);
+                   .HasForeignKey(x => x.IdTipoOcorrencia)
+                   .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(x => x.StatusOcorrencia)
                    .WithMany(x => x.Ocorrencias)
-                   .HasForeignKey(x => x.IdStatusOcorrencia);
+                   .HasForeignKey(x => x.IdStatusOcorrencia)
+                   .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(x => x.Funcionario)
                    .WithMany(x => x.Ocorrencias)
-                   .HasForeignKey(x => x.IdFuncionario);
+                   .HasForeignKey(x => x.IdFuncionario)
+                   .OnDelete(DeleteBehavior.Restrict);
 
         }
     }

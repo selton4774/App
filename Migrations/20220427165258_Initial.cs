@@ -132,7 +132,7 @@ namespace App.Migrations
                         column: x => x.IdFuncionario,
                         principalTable: "Funcionario",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -156,25 +156,25 @@ namespace App.Migrations
                         column: x => x.IdCargo,
                         principalTable: "Cargo",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Contrato_Expediente_IdExpediente",
                         column: x => x.IdExpediente,
                         principalTable: "Expediente",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Contrato_Funcionario_IdFuncionario",
                         column: x => x.IdFuncionario,
                         principalTable: "Funcionario",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Contrato_ModalidadeContrato_IdModalidadeContrato",
                         column: x => x.IdModalidadeContrato,
                         principalTable: "ModalidadeContrato",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -197,19 +197,19 @@ namespace App.Migrations
                         column: x => x.IdFuncionario,
                         principalTable: "Funcionario",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_HoraExtra_ModalidadeHoraExtra_IdModalidadeHoraExtra",
                         column: x => x.IdModalidadeHoraExtra,
                         principalTable: "ModalidadeHoraExtra",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_HoraExtra_Tipo_IdTipo",
                         column: x => x.IdTipo,
                         principalTable: "Tipo",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -232,19 +232,19 @@ namespace App.Migrations
                         column: x => x.IdFuncionario,
                         principalTable: "Funcionario",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Ocorrencia_StatusOcorrencia_IdStatusOcorrencia",
                         column: x => x.IdStatusOcorrencia,
                         principalTable: "StatusOcorrencia",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Ocorrencia_TipoOcorrencia_IdTipoOcorrencia",
                         column: x => x.IdTipoOcorrencia,
                         principalTable: "TipoOcorrencia",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(

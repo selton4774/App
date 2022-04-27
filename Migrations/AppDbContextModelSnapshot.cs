@@ -331,25 +331,25 @@ namespace App.Migrations
                     b.HasOne("App.Models.Cargo", "Cargo")
                         .WithMany("Contratos")
                         .HasForeignKey("IdCargo")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("App.Models.Expediente", "Expediente")
                         .WithMany("Contratos")
                         .HasForeignKey("IdExpediente")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("App.Models.Funcionario", "Funcionario")
                         .WithMany("Contratos")
                         .HasForeignKey("IdFuncionario")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("App.Models.ModalidadeContrato", "ModalidadeContrato")
                         .WithMany("Contratos")
                         .HasForeignKey("IdModalidadeContrato")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Cargo");
@@ -366,19 +366,19 @@ namespace App.Migrations
                     b.HasOne("App.Models.Funcionario", "Funcionario")
                         .WithMany("HorasExtras")
                         .HasForeignKey("IdFuncionario")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("App.Models.ModalidadeHoraExtra", "ModalidadeHoraExtra")
                         .WithMany("HorasExtras")
                         .HasForeignKey("IdModalidadeHoraExtra")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("App.Models.Tipo", "Tipo")
                         .WithMany("HorasExtras")
                         .HasForeignKey("IdTipo")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Funcionario");
@@ -393,19 +393,19 @@ namespace App.Migrations
                     b.HasOne("App.Models.Funcionario", "Funcionario")
                         .WithMany("Ocorrencias")
                         .HasForeignKey("IdFuncionario")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("App.Models.StatusOcorrencia", "StatusOcorrencia")
                         .WithMany("Ocorrencias")
                         .HasForeignKey("IdStatusOcorrencia")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("App.Models.TipoOcorrencia", "TipoOcorrencia")
                         .WithMany("Ocorrencias")
                         .HasForeignKey("IdTipoOcorrencia")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Funcionario");
@@ -420,7 +420,7 @@ namespace App.Migrations
                     b.HasOne("App.Models.Funcionario", "Funcionario")
                         .WithMany("RegistroDePontos")
                         .HasForeignKey("IdFuncionario")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Funcionario");

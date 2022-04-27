@@ -24,7 +24,8 @@ namespace App.Data.Mappings
 
             builder.HasOne(x => x.Funcionario)
                    .WithMany(x => x.RegistroDePontos)
-                   .HasForeignKey(x => x.IdFuncionario);
+                   .HasForeignKey(x => x.IdFuncionario)
+                   .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

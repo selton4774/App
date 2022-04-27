@@ -27,19 +27,23 @@ namespace App.Data.Mappings
 
             builder.HasOne(x => x.Funcionario)
                    .WithMany(x => x.Contratos)
-                   .HasForeignKey(x => x.IdFuncionario);
+                   .HasForeignKey(x => x.IdFuncionario)
+                   .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(x => x.ModalidadeContrato)
                    .WithMany(x => x.Contratos)
-                   .HasForeignKey(x => x.IdModalidadeContrato);
+                   .HasForeignKey(x => x.IdModalidadeContrato)
+                   .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(x => x.Expediente)
                    .WithMany(x => x.Contratos)
-                   .HasForeignKey(x => x.IdExpediente);
+                   .HasForeignKey(x => x.IdExpediente)
+                   .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(x => x.Cargo)
                    .WithMany(x => x.Contratos)
-                   .HasForeignKey(x => x.IdCargo);
+                   .HasForeignKey(x => x.IdCargo)
+                   .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }
